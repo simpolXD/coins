@@ -1,0 +1,31 @@
+# Abyssal Dominion Coins v2.0.4 Language File
+# Small caps + purple gradient style
+
+messages:
+  # Prefix for all messages
+  prefix: "&a[&6AbyssalDominionCoins&c]&a "
+
+  # Coin pickup notification
+  pickup: "&a+{0} coins!"
+
+  # Kill success
+  kill_success: "&a+{0} abyssal coins!"
+
+  # Config messages
+  config_reloaded: "&aConfig reloaded."
+
+  # Economy messages
+  economy_failed: "&cFailed to credit coins."
+
+  # Ecomobs messages
+  ecomobs_boss_kill: "&a+{0} abyssal coins!"
+
+  # Pickup notifications
+  pickup_title: "&a+{0} coins!"
+  pickup_actionbar: "&a+{0} coins!"
+
+  # Rank multiplier hint
+  multiplier_applied: "&a+Rank multiplier applied: &6{amount}x"
+
+  # Coin dropped
+  coin_dropped: "&e&lAbyssal Coin&r&7 dropped!"

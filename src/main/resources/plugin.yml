@@ -1,0 +1,48 @@
+name: abyssaldominioncoins
+version: 2.1.0
+main: com.abyssal.dominion.coins.AbyssalDominionCoins
+api-version: '26.2'
+description: 'Drops coins when mobs are killed. Vault/Economy integration, LuckPerms rank multiplier, PlaceholderAPI.'
+softdepend: [Vault, LuckPerms, ecomobs, PlaceholderAPI, EssentialsX]
+libraries:
+  - 'net.kyori:adventure-platform-bukkit:4.4.1'
+  - 'net.kyori:adventure-text-minimessage:4.20.0'
+  - 'net.kyori:adventure-text-serializer-legacy:4.20.0'
+  - 'net.kyori:adventure-text-serializer-plain:4.20.0'
+
+commands:
+  adc:
+    description: 'Abyssal Dominion Coins admin command'
+    usage: '/adc <reload|balance|payout>'
+    permission: 'abyssaldominioncoins.command'
+
+    version:
+      description: 'Show the plugin version and author'
+      usage: '/adc version'
+      permission: 'abyssaldominioncoins.version'
+
+  abyssaldominioncoins:
+    description: 'Main Abyssal Dominion coins command'
+    usage: '/abyssaldominioncoins <version|balance>'
+    aliases: [adc, coins]
+    permission: 'abyssaldominioncoins.command'
+
+permissions:
+  abyssaldominioncoins.command:
+    description: Allows use of the Abyssal Dominion coins command
+    default: true
+  abyssaldominioncoins.version:
+    description: Allows viewing the plugin version
+    default: true
+  abyssaldominioncoins.reload:
+    description: Allows reloading the plugin configuration
+    default: op
+  abyssaldominioncoins.balance:
+    description: Allows checking coin balance
+    default: op
+  abyssaldominioncoins.payout:
+    description: Allows making coin payouts
+    default: op
+  abyssaldominioncoins.multiplier.*:
+    description: Allows accessing rank-based coin multipliers
+    default: true

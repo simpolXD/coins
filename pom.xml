@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.abyssal.dominion</groupId>
+    <artifactId>abyssaldominioncoins</artifactId>
+    <version>2.1.0</version>
+    <name>Abyssal Dominion Coins</name>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>25</maven.compiler.release>
+        <paper.version>26.2.build.135-stable</paper.version>
+    </properties>
+    <repositories>
+        <repository><id>papermc</id><url>https://repo.papermc.io/repository/maven-public/</url></repository>
+        <repository><id>jitpack</id><url>https://jitpack.io</url></repository>
+        <repository><id>placeholderapi</id><url>https://repo.helpch.at/releases/</url></repository>
+    </repositories>
+    <dependencies>
+        <dependency><groupId>io.papermc.paper</groupId><artifactId>paper-api</artifactId><version>${paper.version}</version><scope>provided</scope></dependency>
+        <dependency><groupId>com.github.MilkBowl</groupId><artifactId>VaultAPI</artifactId><version>1.7</version><scope>provided</scope></dependency>
+        <dependency><groupId>net.luckperms</groupId><artifactId>api</artifactId><version>5.5</version><scope>provided</scope></dependency>
+        <dependency><groupId>me.clip</groupId><artifactId>placeholderapi</artifactId><version>2.12.3</version><scope>provided</scope></dependency>
+        <dependency><groupId>org.junit.jupiter</groupId><artifactId>junit-jupiter</artifactId><version>5.10.2</version><scope>test</scope></dependency>
+        <dependency><groupId>org.mockito</groupId><artifactId>mockito-core</artifactId><version>5.24.0</version><scope>test</scope></dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.13.0</version><configuration><release>25</release><showWarnings>true</showWarnings><compilerArgs><arg>-Xlint:deprecation</arg></compilerArgs></configuration></plugin>
+            <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.5.2</version><configuration><argLine>-javaagent:${settings.localRepository}/org/mockito/mockito-core/5.24.0/mockito-core-5.24.0.jar -Xshare:off</argLine></configuration></plugin>
+        </plugins>
+    </build>
+</project>

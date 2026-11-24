@@ -1,0 +1,295 @@
+# Abyssal Dominion Coins v2.0.3
+# ecomobs.yml - Vanilla mob configuration
+# ============================================
+
+# ============================================
+# Vanilla Mob Whitelist & Blacklist
+# ============================================
+#
+# Use this file to control which vanilla mobs drop coins.
+# Whitelist: Only listed mobs will drop coins
+# Blacklist: Listed mobs will NOT drop coins
+#
+# Mob registry names use format: "minecraft:entity_name"
+
+vanilla-mobs:
+  whitelist:
+    # Leave empty to allow all mobs by default
+    # Add specific mobs here to restrict which mobs drop coins
+  - "minecraft:zombie"
+  - "minecraft:skeleton"
+  - "minecraft:cow"
+  - "minecraft:pig"
+  - "minecraft:sheep"
+  - "minecraft:chicken"
+  - "minecraft:cat"
+  - "minecraft:dolphin"
+  - "minecraft:ocelot"
+  - "minecraft:parrot"
+  - "minecraft:fox"
+  - "minecraft:ravager"
+  - "minecraft:spider"
+  - "minecraft:enderman"
+  - "minecraft:pillager"
+  - "minecraft:vindicator"
+  - "minecraft:wither_skeleton"
+  - "minecraft:husk"
+  - "minecraft:stray"
+  - "minecraft:witch"
+
+  blacklist:
+    # Leave empty to allow all listed mobs
+  - ""
+
+# ============================================
+# Per-Mob Configuration
+# ============================================
+#
+# Each mob has its own config section with:
+#   - drop-chance: Probability of dropping coins (0.0 to 1.0)
+#   - coin-amount: Range of coins to drop (min, max)
+#   - multiplier: Rank multiplier range (min, max)
+#
+# Custom mobs from ecomobs are included below.
+
+mob-config:
+  # ===== ecomobs elite mobs =====
+
+  # Blightfang Brute
+  "minecraft:zombie":
+    drop-chance: 1.0
+    coin-amount:
+      min: 5
+      max: 12
+    multiplier:
+      min: 1.0
+      max: 1.5
+
+  # Bone Harrier
+  "minecraft:skeleton":
+    drop-chance: 1.0
+    coin-amount:
+      min: 5
+      max: 12
+    multiplier:
+      min: 1.0
+      max: 1.5
+
+  # Chieftain Gorrak
+  "minecraft:vindicator":
+    drop-chance: 1.0
+    coin-amount:
+      min: 8
+      max: 18
+    multiplier:
+      min: 1.0
+      max: 2.0
+
+  # Corah Scourge
+  "minecraft:ravager":
+    drop-chance: 1.0
+    coin-amount:
+      min: 8
+      max: 18
+    multiplier:
+      min: 1.0
+      max: 2.0
+
+  # Frostbite Matriarch
+  "minecraft:stray":
+    drop-chance: 1.0
+    coin-amount:
+      min: 5
+      max: 12
+    multiplier:
+      min: 1.0
+      max: 1.5
+
+  # Frostbow Stray
+  "minecraft:stray":
+    drop-chance: 1.0
+    coin-amount:
+      min: 5
+      max: 12
+    multiplier:
+      min: 1.0
+      max: 1.5
+
+  # Gloom Spinner
+  "minecraft:spider":
+    drop-chance: 1.0
+    coin-amount:
+      min: 5
+      max: 12
+    multiplier:
+      min: 1.0
+      max: 1.5
+
+  # Grave Knight Malric
+  "minecraft:wither_skeleton":
+    drop-chance: 1.0
+    coin-amount:
+      min: 8
+      max: 18
+    multiplier:
+      min: 1.0
+      max: 2.0
+
+  # Grave Ravager
+  "minecraft:ravager":
+    drop-chance: 1.0
+    coin-amount:
+      min: 8
+      max: 18
+    multiplier:
+      min: 1.0
+      max: 2.0
+
+  # Hexer Witch
+  "minecraft:witch":
+    drop-chance: 1.0
+    coin-amount:
+      min: 8
+      max: 18
+    multiplier:
+      min: 1.0
+      max: 2.0
+
+  # Husk Bruiser
+  "minecraft:husk":
+    drop-chance: 1.0
+    coin-amount:
+      min: 8
+      max: 18
+    multiplier:
+      min: 1.0
+      max: 2.0
+
+  # Ironbone Captain
+  "minecraft:skeleton":
+    drop-chance: 1.0
+    coin-amount:
+      min: 8
+      max: 18
+    multiplier:
+      min: 1.0
+      max: 2.0
+
+  # Malgrim Bone Tyrant
+  "minecraft:wither_skeleton":
+    drop-chance: 1.0
+    coin-amount:
+      min: 10
+      max: 22
+    multiplier:
+      min: 1.0
+      max: 2.5
+
+  # Nyxara Brood Queen
+  "minecraft:spider":
+    drop-chance: 1.0
+    coin-amount:
+      min: 8
+      max: 18
+    multiplier:
+      min: 1.0
+      max: 2.0
+
+  # Pillager Raider
+  "minecraft:pillager":
+    drop-chance: 1.0
+    coin-amount:
+      min: 8
+      max: 18
+    multiplier:
+      min: 1.0
+      max: 2.0
+
+  # Rot King Ghul
+  "minecraft:zombie":
+    drop-chance: 1.0
+    coin-amount:
+      min: 10
+      max: 22
+    multiplier:
+      min: 1.0
+      max: 2.5
+
+  # Rotted Marauder
+  "minecraft:zombie":
+    drop-chance: 1.0
+    coin-amount:
+      min: 8
+      max: 18
+    multiplier:
+      min: 1.0
+      max: 2.0
+
+  # Vindicator Berserker
+  "minecraft:vindicator":
+    drop-chance: 1.0
+    coin-amount:
+      min: 8
+      max: 18
+    multiplier:
+      min: 1.0
+      max: 2.0
+
+  # Voidwalker Xerith
+  "minecraft:enderman":
+    drop-chance: 1.0
+    coin-amount:
+      min: 8
+      max: 18
+    multiplier:
+      min: 1.0
+      max: 2.0
+
+  # Vorath Scourge
+  "minecraft:ravager":
+    drop-chance: 1.0
+    coin-amount:
+      min: 8
+      max: 18
+    multiplier:
+      min: 1.0
+      max: 2.0
+
+  # Warlock Evoker
+  "minecraft:evoker":
+    drop-chance: 1.0
+    coin-amount:
+      min: 10
+      max: 22
+    multiplier:
+      min: 1.0
+      max: 2.5
+
+  # Zalthor Stormcaller
+  "minecraft:evoker":
+    drop-chance: 1.0
+    coin-amount:
+      min: 10
+      max: 22
+    multiplier:
+      min: 1.0
+      max: 2.5
+
+# ============================================
+# Ecomobs Boss Configuration
+# ============================================
+#
+# This section is for special ecomobs bosses.
+# Use the same format as vanilla mob config above.
+# The key must match the ecomobs entity registry name.
+
+ecomobs-boss-config:
+  # Add ecomobs bosses here
+  # "ecomobs:your_boss_name":
+  #   drop-chance: 1.0
+  #   coin-amount:
+  #     min: 15
+  #     max: 30
+  #   multiplier:
+  #     min: 1.0
+  #     max: 2.5

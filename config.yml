@@ -1,0 +1,155 @@
+# Abyssal Dominion Coins v2.0.2
+# ==============================
+#
+# Full configuration for the coin drop system.
+# All options are listed below with descriptions and defaults.
+
+general:
+
+  # Enable or disable the whole coin drop system
+  enabled: true
+
+  # Enable or disable coins on player mob kills
+  coin-drops-enabled: true
+
+  # Enable or disable coins on PVP kills
+  pvp-coin-drops-enabled: false
+
+  # Payout type: true = add to balance (Vault/EssentialsX), false = drop as items
+  payout-type:
+    balance: true
+    balance-amount: 10.0
+    flat-amount: 5.0
+
+  # Anti-exploit: same IP won't drop coins if enabled
+  anti-exploit:
+    same-ip-enabled: true
+    max-kills-per-hour: 10
+
+  # Per-world coin drop control
+  world-whitelist: []
+  world-blacklist: []
+
+ecomobs:
+
+  # Enable ecomobs boss hook
+  enabled: true
+
+  # Multiplier for boss mobs
+  boss-multiplier: 2.0
+
+  # Per-entity coin overrides (use entity registry names like "ecomobs:electron_boss")
+  entity-coin-value:
+    "ecomobs:electron_boss": 50
+    "ecomobs:blightfang_brute": 75
+    "minecraft:ender_dragon": 25
+
+vanilla-mobs:
+
+  # Enable vanilla mob coin drops
+  enabled: true
+
+  # Drop hostile mobs (zombies, skeletons, etc.)
+  hostile:
+    enabled: true
+    drop-chance: 0.90
+
+  # Drop passive mobs ( cows, pigs, etc.)
+  passive:
+    enabled: false
+    drop-chance: 0.50
+
+  # Minimum percentage of damage a player needs to deal
+  percentage-player-hit: 0.80
+
+ore-mining:
+
+  # Enable ore mining coin drops
+  enabled: true
+
+  # Drop chance (0.0 to 1.0)
+  drop-chance: 0.20
+
+  # Whitelist of ores (empty = allow all)
+  whitelist:
+    - "minecraft:diamond_ore"
+    - "minecraft:deepslate_diamond_ore"
+
+  # Blacklist of ores
+  blacklist: []
+
+coin-material:
+
+  # Coin material type: "vanilla" or "skull"
+  type:
+    skull: false
+
+  # Vanilla item material (default: gold_nugget)
+  vanilla-material: "minecraft:gold_nugget"
+
+  # Custom model data (for textures)
+  custom-model-data: 0
+
+  # Skull texture (player head) - leave empty for default skull
+  skull-texture: ""
+
+rank-multipliers:
+
+  # Enable rank multiplier based on LuckPerms groups
+  enabled: true
+
+  # Range for random rank multiplier (min, max)
+  min: 1.0
+  max: 2.0
+
+  # Group multipliers (lowercase group names)
+  admin: 3.0
+  moderator: 2.0
+  member: 1.0
+  default: 1.0
+
+payout-type:
+
+  # Type of payout: "balance" or "flat"
+  type: "balance"
+
+  # Per-mob payout amounts (when type is "flat")
+  flat-amount: 10.0
+
+coin-amount:
+
+  # Random coin amount range (min, max)
+  min: 5.0
+  max: 10.0
+
+pickup:
+
+  # Play pickup sound
+  sound:
+    enabled: true
+    name: "minecraft:item.armor.equip_gold"
+    pitch: 0.30
+    volume: 0.50
+
+  # Notification position: "actionbar" (above hotbar) or "title"
+  notification:
+    position: "actionbar"
+
+  # Notification format (small caps + purple gradient)
+  notification:
+    format: "&a+{amount} coins!"
+
+  # Title notification (use when position is "title")
+  title:
+    enabled: true
+    fade-in: 10
+    stay: 40
+    fade-out: 10
+
+# Chat prefix for all messages
+message-prefix: "&a[&6AbyssalDominionCoins&c]&a "
+
+# Lang file settings
+lang-file:
+  enabled: true
+  file: "lang"
