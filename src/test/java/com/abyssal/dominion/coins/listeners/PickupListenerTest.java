@@ -19,6 +19,7 @@ class PickupListenerTest {
         when(manager.getConfig()).thenReturn(config);
         when(config.getCoinMaterialType()).thenReturn("vanilla");when(config.getCoinMaterialVanilla()).thenReturn("minecraft:gold_nugget");
         when(config.getRandomCoinAmountInt()).thenReturn(5);when(config.getPickupNotificationPosition()).thenReturn("actionbar");
+        when(config.getPickupNotificationFormat()).thenReturn("&a+{amount} coins!");
         player=mock(Player.class); item=mock(Item.class);when(item.getUniqueId()).thenReturn(UUID.randomUUID());
         var stack=mock(org.bukkit.inventory.ItemStack.class);when(item.getItemStack()).thenReturn(stack);when(stack.getType()).thenReturn(org.bukkit.Material.GOLD_NUGGET);
         listener=new PickupListener(plugin,config,economy);
